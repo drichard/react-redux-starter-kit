@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   locals: function (options) {
@@ -24,4 +24,4 @@ module.exports = {
 
   beforeInstall: function (options) {},
   afterInstall: function (options) {}
-}
+};

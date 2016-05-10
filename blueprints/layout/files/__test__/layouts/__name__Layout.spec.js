@@ -4,4 +4,4 @@ describe('(Layout) <%= pascalEntityName %>', () => {
   it('should exist', () => {
 
   })
-})
+});

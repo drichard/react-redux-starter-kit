@@ -4,4 +4,4 @@ describe('(View) <%= pascalEntityName %>', () => {
   it('should exist', () => {
 
   })
-})
+});

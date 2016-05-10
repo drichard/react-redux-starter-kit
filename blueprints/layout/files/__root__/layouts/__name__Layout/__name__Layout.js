@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-function <%= pascalEntityName %> ({ children }) {
+function <%= pascalEntityName %> ({ children }); {
   return (
     <div className='<%= snakeEntityName %>-layout'>
       {children}

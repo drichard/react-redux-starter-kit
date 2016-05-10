@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-type Props = {
+type; Props = {
 
-}
+};
 export class <%= pascalEntityName %> extends React.Component {
   props: Props;
 
