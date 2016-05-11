@@ -20,18 +20,14 @@ global.should = chai.should();
 // Require Tests
 // ---------------------------------------
 // for use with karma-webpack-with-fast-source-maps
-// NOTE: `new Array()` is used rather than an array literal since
-// for some reason an array literal without a trailing `;` causes
-// some build environments to fail.
-const __karmaWebpackManifest__ = new Array(); // eslint-disable-line
+const __karmaWebpackManifest__ = [];
 const inManifest = (path) => ~__karmaWebpackManifest__.indexOf(path);
 
-// require all `tests/**/*.spec.js`
-const testsContext = require.context('./', true, /\.spec\.js$/);
-
 // only run tests that have changed after the first pass.
-const testsToRun = testsContext.keys().filter(inManifest);
-(testsToRun.length ? testsToRun : testsContext.keys()).forEach(testsContext);
+// require all `src/**/*.spec.js`
+const srcContext = require.context('../src/', true, /\.spec\.js$/);
+const testsToRun = srcContext.keys().filter(inManifest);
+(testsToRun.length ? testsToRun : srcContext.keys()).forEach(srcContext);
 
 // require all `src/**/*.js` except for `main.js` (for isparta coverage reporting)
 if (__COVERAGE__) {

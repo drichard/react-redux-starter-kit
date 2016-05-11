@@ -5,14 +5,18 @@
     "standard-react"
   ],
   "env"     : {
-    "browser" : true
+    "browser" : true,
+    "mocha": true
   },
   "globals" : {
     "__DEV__"      : false,
     "__PROD__"     : false,
     "__DEBUG__"    : false,
     "__COVERAGE__" : false,
-    "__BASENAME__" : false
+    "__BASENAME__" : false,
+    "expect" : false,
+    "should" : false,
+    "sinon"  : false
   },
   "rules": {
     "semi" : [2, "always"],
